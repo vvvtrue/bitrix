@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Тайтл");
         "SORT_BY2" => "SORT",
         "SORT_ORDER2" => "ASC",
         "FILTER_NAME" => "",
-        "FIELD_CODE" => Array("ID"),
+        "FIELD_CODE" => "DETAIL_PICTURES",
         "PROPERTY_CODE" => Array("DESCRIPTION"),
         "CHECK_DATES" => "Y",
         "DETAIL_URL" => "",
