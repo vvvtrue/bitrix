@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Тайтл");
 
 
 <h3>Наши услуги</h3>
-<?$APPLICATION->IncludeComponent("bitrix:news.list","",Array(
+<?$APPLICATION->IncludeComponent("skillup:news.list","posts",Array(
         "DISPLAY_DATE" => "Y",
         "DISPLAY_NAME" => "Y",
         "DISPLAY_PICTURE" => "Y",

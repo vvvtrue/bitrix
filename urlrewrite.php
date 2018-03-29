@@ -1,23 +1,21 @@
 <?
 $arUrlRewrite = array(
-	array(
+
+    array(
+        "CONDITION"	=>	"#^/products/([\\w-]+)([/\\?].*)#",
+        "RULE"	=>	"CODE=\$1",
+        "ID"	=>	"bitrix:news.list",
+        "PATH"	=>	"/post/detai.php",
+    ),
+
+    array(
 		"CONDITION"	=>	"#^/services/#",
 		"RULE"	=>	"",
-		"ID"	=>	"bitrix:catalog",
-		"PATH"	=>	"/services/index.php",
+		"ID"	=>	"",
+		"PATH"	=>	"/posts/index.php",
 	),
-	array(
-		"CONDITION"	=>	"#^/products/#",
-		"RULE"	=>	"",
-		"ID"	=>	"bitrix:catalog",
-		"PATH"	=>	"/products/index.php",
-	),
-	array(
-		"CONDITION"	=>	"#^/news/#",
-		"RULE"	=>	"",
-		"ID"	=>	"bitrix:news",
-		"PATH"	=>	"/news/index.php",
-	),
+
+
 );
 
 ?>

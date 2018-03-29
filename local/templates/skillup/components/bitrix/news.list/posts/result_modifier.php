@@ -6,10 +6,15 @@ $aSize = [
     'height' => 200,
 ];
 
-foreach ($arResult['ITEMS'] as $aItem){
-    $aPicture = \CFile::ResizeImageGet($aItem['DETAIL_PICTURE'], $aSize, $aSize, BX_RESIZE_IMAGE_EXACT);
-    $arResult['PICTURES'][$aItem['ID']]= $aPicture;
-
-   // echo '<pre>'; print_r($aItem); exit;
+foreach ($arResult['ITEMS'] as &$aItem){
+    processPost($aItem, $aSize);
 }
 
+
+function processPost(&$aPost, $aSize){
+    $aPicture = \CFile::ResizeImageGet($aPost['DETAIL_PICTURE'], $aSize,  BX_RESIZE_IMAGE_EXACT);
+    $aPost['DETAIL_PICTURE'][$aItem['ID']]= $aPicture;
+
+    $iAuthorId =  $aItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE'];
+     $aPost['AUTHOR'] = $aItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE'];
+}
